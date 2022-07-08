@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/android/AndroidStudioProjects/MyTODOlist/app/src/main/res/layout/activity_main.xml" value="0.25885416666666666" />
         <entry key="..\:/android/AndroidStudioProjects/MyTODOlist/app/src/main/res/layout/activity_main2.xml" value="0.27291666666666664" />
+        <entry key="..\:/android/AndroidStudioProjects/MyTODOlist/app/src/main/res/layout/fragment_list.xml" value="0.27291666666666664" />
+        <entry key="..\:/android/AndroidStudioProjects/MyTODOlist/app/src/main/res/layout/fragment_note_text.xml" value="0.27291666666666664" />
+        <entry key="..\:/android/AndroidStudioProjects/MyTODOlist/app/src/main/res/layout/recyclerview_item.xml" value="0.27291666666666664" />
       </map>
     </option>
   </component>
