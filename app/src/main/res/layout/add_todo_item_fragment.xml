@@ -3,52 +3,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="View.AddTodoItemFragment"
+    android:background="@color/black">
 
 
     <Button
         android:id="@+id/btnSaveText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#8BC34A"
+        android:backgroundTint="@color/grey"
         android:text="save"
         app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ENTRY FIELD:"
-        android:textSize="20dp"
-        android:background="#03A9F4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintTop_toBottomOf="@+id/etTextD"
+        app:layout_constraintVertical_bias="0.05" />
 
     <EditText
         android:id="@+id/etText"
-        android:layout_width="410dp"
-        android:layout_height="683dp"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:background="#03A9F4"
+        android:background="@color/grey"
+        android:hint="   Название задачи"
         android:minHeight="48dp"
+        android:selectAllOnFocus="true"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.203"
         tools:ignore="SpeakableTextPresentCheck">
 
+    </EditText>
+
+    <EditText
+        android:id="@+id/etTextD"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:hint="   Описание задачи"
+        android:minHeight="48dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etText"
+        app:layout_constraintVertical_bias="0.029"
+        tools:ignore="SpeakableTextPresentCheck">
+        />
     </EditText>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

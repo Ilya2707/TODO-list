@@ -9,33 +9,33 @@ import android.widget.EditText
 import androidx.fragment.app.*
 import Model.NavResultDispatcher
 import Model.OrderViewModel
+import androidx.navigation.fragment.findNavController
 import com.example.mytodolist.R
+import com.example.mytodolist.databinding.AddTodoItemFragmentBinding
 
 
-class AddTodoItemFragment : Fragment() {
+class AddTodoItemFragment : Fragment(R.layout.add_todo_item_fragment) {
+
+
 
     private val sharedViewModel: OrderViewModel by activityViewModels()
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.add_todo_item_fragment, container, false)
-    }
+    private lateinit var binding: AddTodoItemFragmentBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
-        val saveButton: Button = view.findViewById(R.id.btnSaveText)
-        val editText: EditText = view.findViewById(R.id.etText)
-        saveButton.setOnClickListener() {
-            var toDoItem: ToDoItem = ToDoItem(editText.getText().toString(), false)
+        binding = AddTodoItemFragmentBinding.bind(view)
+        //val saveButton: Button = view.findViewById(R.id.btnSaveText)
+        //val editText: EditText = view.findViewById(R.id.etText)
+            binding.btnSaveText.setOnClickListener() {
+            val toDoItem = ToDoItem(binding.etText.getText().toString(), false, binding.etTextD.getText().toString())
             sharedViewModel.setTodo(toDoItem)
-            NavResultDispatcher.sendNavResult("ADD_TODO_ITEM", toDoItem)
-            (activity as MainActivity).navController.navigate(R.id.action_noteText_to_listFragment)
+            //(activity as MainActivity).navController.navigate(R.id.action_noteText_to_listFragment)
+                findNavController().navigate(R.id.action_addTodoItemFragment_to_todoListFragment)
         }
     }
 }
+
 
 
 

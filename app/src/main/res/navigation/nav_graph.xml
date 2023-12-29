@@ -3,23 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/listFragment">
+    app:startDestination="@id/todoListFragment">
 
     <fragment
-        android:id="@+id/listFragment"
-        android:name="com.example.mytodolist.ListFragment"
-        android:label="fragment_list"
+        android:id="@+id/todoListFragment"
+        android:name="View.TodoListFragment"
+        android:label="todo_list_fragment"
         tools:layout="@layout/todo_list_fragment" >
         <action
-            android:id="@+id/action_listFragment_to_noteText2"
-            app:destination="@id/noteText" />
+            android:id="@+id/action_todoListFragment_to_addTodoItemFragment"
+            app:destination="@id/addTodoItemFragment" />
+        <action
+            android:id="@+id/action_todoListFragment_to_description"
+            app:destination="@id/description" />
     </fragment>
     <fragment
-        android:id="@+id/noteText"
-        android:name="com.example.mytodolist.NoteText"
-        android:label="NoteText" >
+        android:id="@+id/addTodoItemFragment"
+        android:name="View.AddTodoItemFragment"
+        android:label="add_todo_item_fragment"
+        tools:layout="@layout/add_todo_item_fragment" >
         <action
-            android:id="@+id/action_noteText_to_listFragment"
-            app:destination="@id/listFragment" />
+            android:id="@+id/action_addTodoItemFragment_to_todoListFragment"
+            app:destination="@id/todoListFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/description"
+        android:name="View.Description"
+        android:label="description_todo"
+        tools:layout="@layout/description_todo" />
 </navigation>

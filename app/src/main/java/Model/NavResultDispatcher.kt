@@ -21,11 +21,13 @@ object NavResultDispatcher {
         listeners.forEach { listener ->
             listener.onNavResult(key, argument)
             listener.changeNavResult(key, argument)
+            listener.deleteNavResult(key, argument)
         }
     }
 
     interface Listener {
         fun onNavResult(key: String, argument: Any? = null)
         fun changeNavResult(key: String, argument: Any? = null)
+        fun deleteNavResult(key: String, argument: Any? = null)
     }
 }

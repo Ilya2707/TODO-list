@@ -1,39 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="70dp"
     android:foregroundTint="#2196F3"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/black"
+>
+
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/grey"
+        android:text="—"
+        android:textAllCaps="false"
+        android:textSize="25dp"
+        app:cornerRadius="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897" />
 
     <TextView
         android:id="@+id/tV1"
-        android:layout_width="329dp"
-        android:layout_height="wrap_content"
-        android:background="#549BDCE4"
+        android:layout_width="271dp"
+        android:layout_height="25dp"
+
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="20dp"
-        app:drawableTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/chB1"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.523" />
+        app:layout_constraintVertical_bias="0.062" />
 
     <CheckBox
         android:id="@+id/chB1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_700"
-        android:backgroundTint="#03A9F4"
-        android:buttonTint="#FBF8F8"
+        android:layout_width="56dp"
+        android:layout_height="61dp"
+        android:buttonTint="@color/grey"
         android:checked="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.005"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.222" />
 </androidx.constraintlayout.widget.ConstraintLayout>
